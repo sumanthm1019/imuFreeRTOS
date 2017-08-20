@@ -1,0 +1,25 @@
+/*
+ * adf001.h
+ *
+ *  Created on: Aug 19, 2017
+ *      Author: Sumanth
+ */
+
+#ifndef DRIVERS_LL_ADF001_H_
+#define DRIVERS_LL_ADF001_H_
+
+// i2c Slave device addresses
+#define ACCEL_DEV_ADDR 	0x19
+#define MAG_DEV_ADDR	0x1E
+#define GYRO_DEV_ADDR	0x35
+
+
+// Gyro Register Map
+
+#define GYRO_WHO_AM_I_REG
+
+
+uint16_t adf001_init(void);
+
+
+#endif /* DRIVERS_LL_ADF001_H_ */

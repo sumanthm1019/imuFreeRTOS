@@ -1,0 +1,15 @@
+/*
+ * adf001.h
+ *
+ *  Created on: Aug 19, 2017
+ *      Author: Sumanth
+ */
+
+#ifndef DRIVERS_LL_ADF001_H_
+#define DRIVERS_LL_ADF001_H_
+
+
+uint16_t adf001_init(void);
+
+
+#endif /* DRIVERS_LL_ADF001_H_ */

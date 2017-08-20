@@ -1,0 +1,43 @@
+/*
+ * adf001.c
+ *
+ *  Created on: Aug 19, 2017
+ *      Author: Sumanth
+ */
+
+
+
+#include "adf001.h"
+#include "i2c.h"
+
+/*
+ * @brief Local Static Variables
+ */
+
+/*
+ * @brief Local Static Functions
+ */
+static uint16_t l3gd20_gyro_init(void)
+{
+	uint16_t err_num = 0;
+
+	uint8_t data;
+	NRF_LOG_INFO("l3gd20_gyro_init\r\n");
+	err_num = i2c_read(&data, GYRO_WHOAMI_REG, GYRO_DEV_ADDR);
+
+	NRF_LOG_INFO("Gyro device val is 0x%02X\r\n", data);
+
+	if(data != GYRO_WHOAMI_VAL)
+	{
+		NRF_LOG_INFO("GYRO Device value is incorrect [0x%02X, expected 0x%02X]\r\n", data, GYRO_WHOAMI_VAL);
+	}
+	return err_num;
+}
+
+
+uint16_t adf001_init(void)
+{
+	uint16_t err_num = 0;
+	err_num = l3gd20_gyro_init();
+	return err_num;
+}

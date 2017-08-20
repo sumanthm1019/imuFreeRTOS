@@ -1,0 +1,17 @@
+/*
+ * imuAPI.c
+ *
+ *  Created on: Aug 19, 2017
+ *      Author: Sumanth
+ */
+#include "main.h"
+
+#include "imuAPI.h"
+
+uint16_t imu_init(void)
+{
+	uint16_t err_num = 0;
+
+	err_num =
+	return err_num;
+}

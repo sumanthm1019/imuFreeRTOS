@@ -1,0 +1,18 @@
+/*
+ * i2c.h
+ *
+ *  Created on: Aug 19, 2017
+ *      Author: Sumanth
+ */
+#include "main.h"
+
+
+typedef struct
+{
+	nrf_drv_twi_t twi;
+	uint8_t sda;
+	uint8_t scl;
+}i2c_cfg_t;
+
+uint16_t i2cInit(void);
+

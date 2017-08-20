@@ -1,0 +1,15 @@
+/*
+ * imuTask.c
+ *
+ *  Created on: Aug 18, 2017
+ *      Author: Sumanth
+ */
+
+#include "main.h"
+
+
+void imuTask(void * pvParameter)
+{
+	NRF_LOG_INFO("imuTask Started\r\n");
+
+}

@@ -1,0 +1,6 @@
+23:19:11 **** Incremental Build of configuration Default for project imu_FreeRTOS ****
+make VERBOSE=1 all 
+make: Nothing to be done for 'all'.
+
+23:19:11 Build Finished (took 185ms)
+

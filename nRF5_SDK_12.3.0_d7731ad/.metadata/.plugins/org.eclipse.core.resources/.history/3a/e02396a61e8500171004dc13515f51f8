@@ -1,0 +1,19 @@
+/*
+ * adf001.c
+ *
+ *  Created on: Aug 19, 2017
+ *      Author: Sumanth
+ */
+
+
+
+#include "adf001.h"
+#include "i2c.h"
+
+/*
+ * @brief Local Static Variables
+ */
+
+/*
+ * @brief Local Static Functions
+ */

@@ -1,0 +1,10 @@
+/*
+ * i2c.h
+ *
+ *  Created on: Aug 19, 2017
+ *      Author: Sumanth
+ */
+#include "main.h"
+
+uint16_t i2cInit(void);
+

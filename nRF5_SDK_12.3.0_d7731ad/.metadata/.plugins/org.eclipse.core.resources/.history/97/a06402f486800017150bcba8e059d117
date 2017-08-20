@@ -1,0 +1,15 @@
+/*
+ * i2c.c
+ *
+ *  Created on: Aug 13, 2017
+ *      Author: Sumanth
+ */
+
+#include "target_config.h"
+#include "i2c.h"
+
+
+
+
+
+

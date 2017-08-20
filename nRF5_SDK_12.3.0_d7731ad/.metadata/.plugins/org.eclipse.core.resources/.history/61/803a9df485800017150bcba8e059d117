@@ -1,0 +1,15 @@
+/*
+ * target_config.h
+ *
+ *  Created on: Aug 13, 2017
+ *      Author: Sumanth
+ */
+
+#ifndef TARGET_CONFIG_H_
+#define TARGET_CONFIG_H_
+
+#define I2C
+
+
+
+#endif /* TARGET_CONFIG_H_ */

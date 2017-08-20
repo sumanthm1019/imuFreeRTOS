@@ -1,0 +1,26 @@
+/*
+ * main.h
+ *
+ *  Created on: Aug 18, 2017
+ *      Author: Sumanth
+ */
+
+#ifndef MAIN_H_
+#define MAIN_H_
+
+#include <stdio.h>
+#include <stdint.h>
+
+#define NRF_LOG_MODULE_NAME "imuFreeRTOS"
+#include "nrf_log.h"
+#include "nrf_log_ctrl.h"
+
+#include "nrf_delay.h"
+
+#include "FreeRTOS.h"
+#include "FreeRTOSConfig.h"
+#include "task.h"
+#include "timers.h"
+
+#define DEBUG_PRINT() NRF_LOG_INFO("[File: %s][Function: %s][Line: %d]\r\n", (uint32_t) __FILE__, (uint32_t) __func__, (uint32_t)__LINE__)
+#endif

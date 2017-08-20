@@ -1,0 +1,14 @@
+/*
+ * i2c.c
+ *
+ *  Created on: Aug 19, 2017
+ *      Author: Sumanth
+ */
+
+
+
+uint16_t i2cInit(void)
+{
+
+
+}

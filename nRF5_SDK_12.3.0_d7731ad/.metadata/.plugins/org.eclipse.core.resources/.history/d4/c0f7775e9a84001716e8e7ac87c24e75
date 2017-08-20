@@ -1,0 +1,15 @@
+/*
+ * i2c.c
+ *
+ *  Created on: Aug 19, 2017
+ *      Author: Sumanth
+ */
+
+#include "i2c.h"
+
+uint16_t i2cInit(void)
+{
+	uint16_t errNum = 0;
+
+	return errrNum;
+}

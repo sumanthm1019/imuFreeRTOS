@@ -1,0 +1,12 @@
+LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/arch=x86
+LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/os=win32
+configDescList=org.eclipse.launchbar.core.descriptorType.default\:Jlink,org.eclipse.launchbar.core.descriptorType.default\:nrf52832_xxaa.out (1),org.eclipse.launchbar.core.descriptorType.default\:nrf52832_xxaa.out,org.eclipse.launchbar.core.descriptorType.default\:imu_FreeRTOS Default,org.eclipse.launchbar.core.descriptorType.default\:imuFreeRTOS Default
+eclipse.preferences.version=1
+org.eclipse.launchbar.core.descriptorType.default\:armgcc\ Default/activeLaunchMode=run
+org.eclipse.launchbar.core.descriptorType.default\:armgcc\ Default/activeLaunchTarget=org.eclipse.launchbar.core.launchTargetType.local\:Local
+org.eclipse.launchbar.core.descriptorType.default\:imuFreeRTOS\ Default/activeLaunchMode=debug
+org.eclipse.launchbar.core.descriptorType.default\:imuFreeRTOS\ Default/activeLaunchTarget=org.eclipse.launchbar.core.launchTargetType.local\:Local
+org.eclipse.launchbar.core.descriptorType.default\:imu_FreeRTOS\ Default/activeLaunchMode=debug
+org.eclipse.launchbar.core.descriptorType.default\:imu_FreeRTOS\ Default/activeLaunchTarget=org.eclipse.launchbar.core.launchTargetType.local\:Local
+org.eclipse.launchbar.core.descriptorType.default\:nrf52832_xxaa.out/activeLaunchMode=debug
+org.eclipse.launchbar.core.descriptorType.default\:nrf52832_xxaa.out/activeLaunchTarget=org.eclipse.launchbar.core.launchTargetType.local\:Local
