@@ -16,7 +16,7 @@
 
 static nrf_drv_twi_t m_i2c = NRF_DRV_TWI_INSTANCE(TWI_INSTANCE_ID);;
 
-static bool m_i2c_transfer_complete = false;
+static volatile bool m_i2c_transfer_complete = false;
 /**
  * @brief i2c event handler
  */
@@ -25,17 +25,10 @@ static bool m_i2c_transfer_complete = false;
  */
 void twi_handler(nrf_drv_twi_evt_t const * p_event, void * p_context)
 {
-	NRF_LOG_INFO("Twi Handler event type %d\r\n", p_event->type);
     switch (p_event->type)
     {
         case NRF_DRV_TWI_EVT_DONE:
-            if (p_event->xfer_desc.type == NRF_DRV_TWI_XFER_RX)
-            {
-                NRF_LOG_INFO("Data has been received\r\n");
-                m_i2c_transfer_complete = true;
-            }
             m_i2c_transfer_complete = true;
-            NRF_LOG_INFO("Data transfer complete\r\n")
             break;
         default:
             break;
@@ -64,14 +57,26 @@ uint16_t i2c_init(i2c_cfg_t *i2c)
 /**
  * @brief Function to write data on i2c bus
  */
-uint16_t i2c_write(uint8_t *data, uint8_t reg)
+uint16_t i2c_write(uint8_t *data, uint8_t reg, uint8_t dev_addr)
 {
 	uint16_t err_num = 0;
 
-	err_num = nrf_drv_twi_tx(&m_i2c, reg, data, sizeof(data), false);
+	uint8_t dout[2];
+    dout[0] = reg;
+    dout[1] = *data;
+	m_i2c_transfer_complete = false;
+	err_num = nrf_drv_twi_tx(&m_i2c, dev_addr, dout, sizeof(dout), false);
+	if(err_num) { NRF_LOG_INFO("[i2c_write] Failed to write data on i2c bus! [Error Num: 0x%02X]\r\n", err_num); }
+	DEBUG_PRINT();
+	//while(m_i2c_transfer_complete == false);
+	//m_i2c_transfer_complete = false;
+	//NRF_LOG_INFO("not here?!\n");
+	/*err_num = nrf_drv_twi_tx(&m_i2c, dev_addr, data, sizeof(data), false);
 	if(err_num) { NRF_LOG_INFO("[i2c_write] Failed to write data on i2c bus! [Error Num: 0x%02X]\r\n", err_num); }
 
-	// Wait for Tx Complete Semaphore
+	while(m_i2c_transfer_complete == false);
+	m_i2c_transfer_complete = false;*/
+
 	return err_num;
 }
 
@@ -81,13 +86,13 @@ uint16_t i2c_write(uint8_t *data, uint8_t reg)
 uint16_t i2c_read(uint8_t *data, uint8_t reg, uint8_t dev_addr)
 {
 	uint16_t err_num = 0;
+	m_i2c_transfer_complete = false;
 	err_num = nrf_drv_twi_tx(&m_i2c, dev_addr, &reg, 1, false);
 	if(err_num) { NRF_LOG_INFO("[i2c_write] Failed to write data on i2c bus! [Error Num: 0x%02X]\r\n", err_num); }
 
 	while(m_i2c_transfer_complete == false);
 	m_i2c_transfer_complete = false;
 
-	NRF_LOG_INFO("Reading i2c values\r\n");
 	err_num = nrf_drv_twi_rx(&m_i2c, dev_addr, data, sizeof(data));
 	if(err_num) { NRF_LOG_INFO("[i2c_read] Failed to read data on i2c bus! [Error Num: 0x%02X]\r\n", err_num); }
 

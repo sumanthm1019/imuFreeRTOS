@@ -13,7 +13,6 @@
 uint16_t imu_init(void)
 {
 	uint16_t err_num = 0;
-	NRF_LOG_INFO("imu_init\r\n");
 	err_num = adf001_init();
 	return err_num;
 }

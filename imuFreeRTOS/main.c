@@ -98,7 +98,6 @@ static uint16_t driversInit(void)
 {
 	uint16_t errNum = 0;
 
-	NRF_LOG_INFO("Initializing drivers\r\n");
 	return errNum;
 }
 
@@ -108,8 +107,6 @@ static uint16_t driversInit(void)
 static uint16_t commInit(void)
 {
 	uint16_t errNum = 0;
-
-	NRF_LOG_INFO("Initializing Communication Drivers\r\n");
 
 	i2c_cfg_t i2c_adf001;
 	i2c_adf001.scl = ADF001_SCL_PIN;
@@ -130,12 +127,9 @@ int main(void)
 
 	APP_ERROR_CHECK(NRF_LOG_INIT(NULL));
 
-	NRF_LOG_INFO("******Project: imuFreeRTOS*****\r\n");
-	NRF_LOG_INFO("*******************************\r\n");
-
 	// Create FreeRTOS tasks
 	createRtosTasks();
-
+	NRF_LOG_FLUSH();
 	// Initialize communication
 	errNum = commInit();
 	if(errNum) { NRF_LOG_ERROR("Failed to initialize Comm. drivers! [Error Num: 0x%02x]\r\n", errNum); }

@@ -335,7 +335,7 @@
               <MiscControls></MiscControls>
               <Define>NRF52832 NRF52 BOARD_PCA10040 NRF52_PAN_12 NRF52_PAN_15 NRF52_PAN_20 NRF52_PAN_31 NRF52_PAN_36 NRF52_PAN_51 CONFIG_GPIO_AS_PINRESET NRF52_PAN_54 NRF52_PAN_55 NRF52_PAN_58 NRF52_PAN_64 BSP_DEFINES_ONLY NRF_LOG_USES_RTT</Define>
               <Undefine></Undefine>
-              <IncludePath>..\..\..\..\imuFreeRTOS;..\config;..\..\..\..\nRF5_SDK_12.3.0_d7731ad\components;..\..\..\..\nRF5_SDK_12.3.0_d7731ad\components\boards;..\..\..\..\nRF5_SDK_12.3.0_d7731ad\components\drivers_nrf\common;..\..\..\..\nRF5_SDK_12.3.0_d7731ad\components\drivers_nrf\delay;..\..\..\..\nRF5_SDK_12.3.0_d7731ad\components\drivers_nrf\hal;..\..\..\..\nRF5_SDK_12.3.0_d7731ad\components\drivers_nrf\nrf_soc_nosd;..\..\..\..\nRF5_SDK_12.3.0_d7731ad\components\drivers_nrf\twi_master;..\..\..\..\nRF5_SDK_12.3.0_d7731ad\components\drivers_nrf\uart;..\..\..\..\nRF5_SDK_12.3.0_d7731ad\components\libraries\bsp;..\..\..\..\nRF5_SDK_12.3.0_d7731ad\components\libraries\log;..\..\..\..\nRF5_SDK_12.3.0_d7731ad\components\libraries\log\src;..\..\..\..\nRF5_SDK_12.3.0_d7731ad\components\libraries\util;..\..\..\..\nRF5_SDK_12.3.0_d7731ad\components\libraries\timer;..\..\..\..\nRF5_SDK_12.3.0_d7731ad\components\libraries\button;..\..\..\..\nRF5_SDK_12.3.0_d7731ad\components\toolchain;..\..\..;..\..\..\..\nRF5_SDK_12.3.0_d7731ad\external\segger_rtt;..\..\..\..\nRF5_SDK_12.3.0_d7731ad\external\freertos;..\..\..\..\nRF5_SDK_12.3.0_d7731ad\external\freertos\source\include;..\..\..\..\nRF5_SDK_12.3.0_d7731ad\external\freertos\source\portable\MemMang;..\..\..\..\nRF5_SDK_12.3.0_d7731ad\external\freertos\config;..\..\..\..\nRF5_SDK_12.3.0_d7731ad\external\freertos\portable\ARM\nrf52;..\..\..\..\nRF5_SDK_12.3.0_d7731ad\external\freertos\portable\CMSIS\nrf52</IncludePath>
+              <IncludePath>..\..\..\..\imuFreeRTOS;..\config;..\..\..\..\nRF5_SDK_12.3.0_d7731ad\components;..\..\..\..\nRF5_SDK_12.3.0_d7731ad\components\boards;..\..\..\..\nRF5_SDK_12.3.0_d7731ad\components\drivers_nrf\common;..\..\..\..\nRF5_SDK_12.3.0_d7731ad\components\drivers_nrf\delay;..\..\..\..\nRF5_SDK_12.3.0_d7731ad\components\drivers_nrf\hal;..\..\..\..\nRF5_SDK_12.3.0_d7731ad\components\drivers_nrf\nrf_soc_nosd;..\..\..\..\nRF5_SDK_12.3.0_d7731ad\components\drivers_nrf\twi_master;..\..\..\..\nRF5_SDK_12.3.0_d7731ad\components\drivers_nrf\uart;..\..\..\..\nRF5_SDK_12.3.0_d7731ad\components\libraries\bsp;..\..\..\..\nRF5_SDK_12.3.0_d7731ad\components\libraries\log;..\..\..\..\nRF5_SDK_12.3.0_d7731ad\components\libraries\log\src;..\..\..\..\nRF5_SDK_12.3.0_d7731ad\components\libraries\util;..\..\..\..\nRF5_SDK_12.3.0_d7731ad\components\libraries\timer;..\..\..\..\nRF5_SDK_12.3.0_d7731ad\components\libraries\button;..\..\..\..\nRF5_SDK_12.3.0_d7731ad\components\toolchain;..\..\..;..\..\..\..\nRF5_SDK_12.3.0_d7731ad\external\segger_rtt;..\..\..\..\nRF5_SDK_12.3.0_d7731ad\external\freertos;..\..\..\..\nRF5_SDK_12.3.0_d7731ad\external\freertos\source\include;..\..\..\..\nRF5_SDK_12.3.0_d7731ad\external\freertos\source\portable\MemMang;..\..\..\..\nRF5_SDK_12.3.0_d7731ad\external\freertos\config;..\..\..\..\nRF5_SDK_12.3.0_d7731ad\external\freertos\portable\ARM\nrf52;..\..\..\..\nRF5_SDK_12.3.0_d7731ad\external\freertos\portable\CMSIS\nrf52;..\..\..\Drivers\HAL;..\..\..\Drivers\LL;..\..\..\API;..\..\..\Comm;..\..\..\Tasks\imuTask</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -583,6 +583,59 @@
               <FileName>port_cmsis.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\..\..\..\nRF5_SDK_12.3.0_d7731ad\external\freertos\portable\CMSIS\nrf52\port_cmsis.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>DriverAPI</GroupName>
+          <Files>
+            <File>
+              <FileName>imuAPI.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\API\imuAPI.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>Drivers</GroupName>
+        </Group>
+        <Group>
+          <GroupName>LL</GroupName>
+          <Files>
+            <File>
+              <FileName>adf001.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\Drivers\LL\adf001.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>AL</GroupName>
+          <Files>
+            <File>
+              <FileName>imuHAL.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\Drivers\HAL\imuHAL.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>OSTasks</GroupName>
+          <Files>
+            <File>
+              <FileName>imuTask.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\Tasks\imuTask\imuTask.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>Comm</GroupName>
+          <Files>
+            <File>
+              <FileName>i2c.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\..\Comm\i2c.c</FilePath>
             </File>
           </Files>
         </Group>

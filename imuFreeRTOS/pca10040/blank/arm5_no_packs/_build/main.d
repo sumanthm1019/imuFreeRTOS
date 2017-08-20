@@ -1,5 +1,4 @@
 .\_build\main.o: ..\..\..\main.c
-.\_build\main.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
 .\_build\main.o: ..\..\..\..\nRF5_SDK_12.3.0_d7731ad\components\boards\boards.h
 .\_build\main.o: ..\..\..\..\nRF5_SDK_12.3.0_d7731ad\components\drivers_nrf\hal\nrf_gpio.h
 .\_build\main.o: C:\Keil_v5\ARM\PACK\NordicSemiconductor\nRF_DeviceFamilyPack\8.11.1\Device\Include\nrf.h
@@ -19,6 +18,7 @@
 .\_build\main.o: C:\Keil_v5\ARM\PACK\NordicSemiconductor\nRF_DeviceFamilyPack\8.11.1\Device\Include\nrf52832_peripherals.h
 .\_build\main.o: ..\..\..\..\nRF5_SDK_12.3.0_d7731ad\components\libraries\util\nrf_assert.h
 .\_build\main.o: ..\..\..\..\nRF5_SDK_12.3.0_d7731ad\components\libraries\util\app_error.h
+.\_build\main.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
 .\_build\main.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
 .\_build\main.o: ..\..\..\..\nRF5_SDK_12.3.0_d7731ad\components\libraries\util\sdk_errors.h
 .\_build\main.o: ..\..\..\..\nRF5_SDK_12.3.0_d7731ad\components\drivers_nrf\nrf_soc_nosd\nrf_error.h
@@ -33,6 +33,7 @@
 .\_build\main.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
 .\_build\main.o: ..\..\..\..\nRF5_SDK_12.3.0_d7731ad\components\drivers_nrf\hal\nrf_twim.h
 .\_build\main.o: ..\..\..\..\nRF5_SDK_12.3.0_d7731ad\components\drivers_nrf\delay\nrf_delay.h
+.\_build\main.o: ..\..\..\main.h
 .\_build\main.o: ..\..\..\..\nRF5_SDK_12.3.0_d7731ad\components\libraries\log\nrf_log.h
 .\_build\main.o: ..\..\..\..\nRF5_SDK_12.3.0_d7731ad\components\libraries\log\src\nrf_log_internal.h
 .\_build\main.o: ..\..\..\..\nRF5_SDK_12.3.0_d7731ad\components\libraries\util\sdk_common.h
@@ -42,3 +43,17 @@
 .\_build\main.o: ..\..\..\..\nRF5_SDK_12.3.0_d7731ad\components\libraries\util\sdk_macros.h
 .\_build\main.o: ..\..\..\..\nRF5_SDK_12.3.0_d7731ad\components\libraries\log\nrf_log_ctrl.h
 .\_build\main.o: ..\..\..\..\nRF5_SDK_12.3.0_d7731ad\components\libraries\log\src\nrf_log_ctrl_internal.h
+.\_build\main.o: ..\..\..\..\nRF5_SDK_12.3.0_d7731ad\external\freertos\source\include\FreeRTOS.h
+.\_build\main.o: ..\..\..\..\nRF5_SDK_12.3.0_d7731ad\external\freertos\config\FreeRTOSConfig.h
+.\_build\main.o: ..\..\..\..\nRF5_SDK_12.3.0_d7731ad\external\freertos\source\include\projdefs.h
+.\_build\main.o: ..\..\..\..\nRF5_SDK_12.3.0_d7731ad\external\freertos\source\include\portable.h
+.\_build\main.o: ..\..\..\..\nRF5_SDK_12.3.0_d7731ad\external\freertos\source\include\deprecated_definitions.h
+.\_build\main.o: ..\..\..\..\nRF5_SDK_12.3.0_d7731ad\external\freertos\portable\ARM\nrf52\portmacro.h
+.\_build\main.o: ..\..\..\..\nRF5_SDK_12.3.0_d7731ad\external\freertos\portable\CMSIS\nrf52\portmacro_cmsis.h
+.\_build\main.o: ..\..\..\..\nRF5_SDK_12.3.0_d7731ad\external\freertos\source\include\mpu_wrappers.h
+.\_build\main.o: ..\..\..\..\nRF5_SDK_12.3.0_d7731ad\external\freertos\source\include\task.h
+.\_build\main.o: ..\..\..\..\nRF5_SDK_12.3.0_d7731ad\external\freertos\source\include\list.h
+.\_build\main.o: ..\..\..\..\nRF5_SDK_12.3.0_d7731ad\external\freertos\source\include\timers.h
+.\_build\main.o: ..\..\..\Tasks\imuTask\imuTask.h
+.\_build\main.o: ..\..\..\Comm\i2c.h
+.\_build\main.o: ..\..\..\API\imuAPI.h

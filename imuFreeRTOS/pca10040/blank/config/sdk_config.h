@@ -442,14 +442,14 @@
 // <i> Log data is buffered and can be processed in idle.
 //==========================================================
 #ifndef NRF_LOG_DEFERRED
-#define NRF_LOG_DEFERRED 0
+#define NRF_LOG_DEFERRED 1
 #endif
 #if  NRF_LOG_DEFERRED
 // <o> NRF_LOG_DEFERRED_BUFSIZE - Size of the buffer for logs in words. 
 // <i> Must be power of 2
 
 #ifndef NRF_LOG_DEFERRED_BUFSIZE
-#define NRF_LOG_DEFERRED_BUFSIZE 256
+#define NRF_LOG_DEFERRED_BUFSIZE 512
 #endif
 
 #endif //NRF_LOG_DEFERRED

@@ -10,8 +10,6 @@
 
 void imuTask(void * pvParameter)
 {
-	NRF_LOG_INFO("imuTask Started\r\n");
-
 	uint16_t err_num = 0;
 
 	err_num = imu_init();
